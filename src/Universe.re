@@ -5,14 +5,14 @@ open Cell;
 
 let cells: ref(array(life)) = ref([||]);
 
+let set_cell = value => value->Js_array.push(cells^);
+
 let set_initial_cells = () =>
   for (idx in 0 to canvas_height * canvas_width) {
     let life_status = Js_math.random() > 0.5 ? Alive : Dead;
 
-    Js_array.push(life_status, cells^);
+    life_status |> set_cell;
   };
-
-let set_cell = value => value->Js_array.push(cells^);
 
 let drawTable = (~ctx: context) => {
   let jsCtx = context2dToJsObj(ctx);
