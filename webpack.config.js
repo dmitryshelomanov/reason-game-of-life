@@ -5,7 +5,8 @@ module.exports = {
   entry: "./lib/js/src/Index.bs.js",
   output: {
     filename: "app.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/reason-game-of-life/"
   },
   plugins: [
     new HtmlWebpackPlugin({

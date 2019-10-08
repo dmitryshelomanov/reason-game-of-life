@@ -16,6 +16,7 @@
   ],
   "author": "Shelomanov Dmitry <userbq201@mail.ru>",
   "license": "MIT",
+  "homepage": "https://userbq201.github.io/reason-game-of-life/",
   "devDependencies": {
     "bs-platform": "^4.0.3",
     "gh-pages": "^2.1.1",
